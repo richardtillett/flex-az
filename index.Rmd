@@ -13,7 +13,25 @@ library(flexdashboard)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Chart A AZ Likins
+
+```{r}
+
+```
+
+
+### Chart B AZ ANU23
+
+```{r}
+
+```
+### Chart C AZ AN1
+
+```{r}
+
+```
+
+### Chart D AZ AN
 
 ```{r}
 
@@ -22,13 +40,13 @@ Column {data-width=650}
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart E
 
 ```{r}
 
 ```
 
-### Chart C
+### Chart F
 
 ```{r}
 
