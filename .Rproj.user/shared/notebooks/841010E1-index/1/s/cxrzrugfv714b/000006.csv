@@ -1,0 +1,8 @@
+"0","s10_set<-some_good_ones %>% filter(Sample == ""s10"")"
+"0",""
+"0","p <- ggplot(fortify(s10_set), aes(POS, ALT_FREQ)) +"
+"0","   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = ""butt"") +"
+"0","     scale_color_manual(values = c(""#00AFBB"",""#00b300"",""#ff9900""))"
+"0","figC <- ggplotly(p)"
+"2","Error: Insufficient values in manual scale. 4 needed but only 3 provided.
+"

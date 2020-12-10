@@ -11,6 +11,14 @@ output:
 library(flexdashboard)
 library(tidyverse)
 library(plotly)
+
+#00AFBB is a green 20A
+#00AFBB" is cyan
+
+#E7B800" is a yello 20B
+#FC4E07 is rorange
+
+#919191 is gray
 ```
 
 
@@ -27,7 +35,8 @@ some_good_ones<-read_tsv("set10-12-14-L.tsv")
 likins_set<-some_good_ones %>% filter(Sample == "s22")
 
 p <- ggplot(fortify(likins_set), aes(POS, ALT_FREQ)) +
-   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt")
+   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt") +
+   scale_color_manual(values = c("#00b300","#ff6699","#919191"))
 figA <- ggplotly(p)
 figA <- figA %>% layout(dragmode = "pan")
 
@@ -41,46 +50,50 @@ figA
 s14_set<-some_good_ones %>% filter(Sample == "s14")
 
 p <- ggplot(fortify(s14_set), aes(POS, ALT_FREQ)) +
-   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt")
+   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt") +
+     scale_color_manual(values = c("#00b300","#ff6699","#E7B800","#ff9900","#919191"))
 figB <- ggplotly(p)
 figB <- figB %>% layout(dragmode = "pan")
 
 figB
 ```
-### Chart C AZ AN1
+
+### Chart C AZ ANU23
 
 ```{r}
 s10_set<-some_good_ones %>% filter(Sample == "s10")
 
 p <- ggplot(fortify(s10_set), aes(POS, ALT_FREQ)) +
-   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt")
+   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt") +
+     scale_color_manual(values = c("#00AFBB","#00b300","#ff9900"))
 figC <- ggplotly(p)
 figC <- figC %>% layout(dragmode = "pan")
 
 figC
 ```
 
-### Chart D AZ ANU23
+### Chart D AZ AN1
 
 ```{r}
 s12_set<-some_good_ones %>% filter(Sample == "s12")
 
 p <- ggplot(fortify(s12_set), aes(POS, ALT_FREQ)) +
-   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt")
+   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = "butt") +
+     scale_color_manual(values = c("#00b300","#919191"))
 figD <- ggplotly(p)
 figD <- figD %>% layout(dragmode = "pan")
 
 figD
 ```
 
+
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart E
 
-```{r}
 
-```
+
+
 
 ### Chart F
 
