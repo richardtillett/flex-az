@@ -1,0 +1,22 @@
+"0",""
+"0","some_good_ones<-read_tsv(""set10-12-14-L.tsv"")"
+"2","Parsed with column specification:
+cols(
+  POS = [32mcol_double()[39m,
+  Sample = [31mcol_character()[39m,
+  REF = [31mcol_character()[39m,
+  ALT = [31mcol_character()[39m,
+  ALT_FREQ = [32mcol_double()[39m,
+  clade = [31mcol_character()[39m
+)
+"
+"0","#some_good_ones<-read_tsv(""test.tsv"")"
+"0",""
+"0","likins_set<-some_good_ones %>% filter(Sample == ""s22"")"
+"0",""
+"0","p <- ggplot(fortify(likins_set), aes(POS, ALT_FREQ)) +"
+"0","   geom_segment(aes(xend = POS, yend = 0,colour=clade), size = 1.2, lineend = ""butt"")"
+"0","figA <- ggplotly(p)"
+"0","figA <- figA %>% layout(dragmode = ""pan"")"
+"0",""
+"0","figA"
